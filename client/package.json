@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy" : "http://localhost:5001",
+  "proxy": "http://localhost:5001",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -15,6 +15,7 @@
     "@emotion/styled": "^11.11.0",
     "@fontsource/abril-fatface": "^5.0.11",
     "@mui/material": "^5.14.8",
+    "@react-hook/media-query": "^1.1.1",
     "axios": "^1.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -24,16 +24,44 @@ function Navbar() {
     navigate("/contact");
   };
   return (
-    <div className=" w-full h-16 bg-white px-2 py-2 fixed z-10">
+    <div className=" w-full h-20 bg-white px-2 py-2 fixed z-20">
       <div className=" flex justify-between items-center h-full">
-        <div className=" flex gap-2 items-center">
-          <img className=" " src={logo} alt="" width={50} />
-          <div className=" flex flex-col">
-            <h4 className=" font-semibold">Abrar Travel</h4>
-            <h4 className="  text-xs flex justify-end mt-[-5px]">Wings</h4>
+        <div className=" md:flex md:justify-between md:items-center md:w-full md:px-16">
+          <div className=" flex gap-2 items-center ">
+            <img className=" " src={logo} alt="" width={50} />
+            <div className=" flex flex-col">
+              <h4 className=" font-semibold">Abrar Travel</h4>
+              <h4 className="  text-xs flex justify-end mt-[-5px]">Wings</h4>
+            </div>
+          </div>
+          <div className=" hidden md:flex md:gap-10">
+            <h1
+              onClick={navigateHome}
+              className=" md:cursor-pointer md:hover:underline"
+            >
+              Home
+            </h1>
+            <h1
+              onClick={navigateTour}
+              className=" md:cursor-pointer md:hover:underline"
+            >
+              Packages
+            </h1>
+            <h1
+              onClick={navigateAbout}
+              className=" md:cursor-pointer md:hover:underline"
+            >
+              About us
+            </h1>
+            <h1
+              onClick={navigateContact}
+              className=" md:cursor-pointer md:hover:underline"
+            >
+              Contact
+            </h1>
           </div>
         </div>
-        <div className="h-full flex items-center">
+        <div className="h-full flex items-center md:hidden">
           <h1 className="text-4xl" onClick={toggleSidebar}>
             <CgMenuRight />
           </h1>
@@ -41,7 +69,7 @@ function Navbar() {
       </div>
 
       <div
-        className={`fixed top-0 left-0 w-52 h-screen bg-gray-200 z-50 transition-transform duration-300 ease-in-out transform ${
+        className={`fixed top-0 left-0 w-52 h-screen bg-gray-200 z-50 transition-transform duration-300 ease-in-out transform md:hidden ${
           isSidebarOpen ? "" : "-translate-x-full"
         }`}
       >
@@ -63,9 +91,11 @@ function Navbar() {
           </li>
         </ul>
         <div className=" flex gap-5 mt-10 px-5 justify-center">
-          <h1 className=" text-black text-2xl">
-            <FaWhatsapp />
-          </h1>
+          <a href="https://wa.me/+918089104864">
+            <h1 className=" text-black text-2xl">
+              <FaWhatsapp />
+            </h1>
+          </a>
           <h1 className=" text-black text-2xl">
             <FaInstagram />
           </h1>
